@@ -1,5 +1,8 @@
 <template>
-    <span class="hello">Hello World!</span>
+    <div>
+        <span class="hello">Hello World!</span>
+        <router-link to="/about">About</router-link>
+    </div>
 </template>
 
 <script lang="ts">
