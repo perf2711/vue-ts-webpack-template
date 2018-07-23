@@ -1,5 +1,7 @@
+import '@/styles/site.scss';
+
 export class Test {
-    test() {
+    public test() {
         console.log('abc');
     }
 }

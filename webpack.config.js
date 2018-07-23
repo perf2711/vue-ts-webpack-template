@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const process = require('process');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -14,6 +15,10 @@ const config = {
     output: {
         path: resolve('dist'),
         filename: '[name].js'
+    },
+    devServer: {
+        contentBase: '/dist',
+        hot: true
     },
     node: {
         fs: 'empty'
@@ -57,7 +62,8 @@ const config = {
     },
     plugins: [
         new VueLoaderPlugin(),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
 
