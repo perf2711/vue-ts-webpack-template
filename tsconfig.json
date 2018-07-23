@@ -10,13 +10,16 @@
         "removeComments": true,
         "baseUrl": "./src",
         "paths": {
-            "@*": ["."]
+            "@/*": ["./*"]
         },
         "typeRoots": [
-            "node_modules/@types"
+            "node_modules/@types",
+            "typings"
         ],
         "sourceMap": true,
-        "experimentalDecorators": true        
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "plugins": [{ "name": "ts-vue-plugin" }]
     },
     "include": [
         "./src/**/*.ts"

@@ -1,9 +1,12 @@
-import '@/styles/site.scss';
+import { Component , Vue } from 'av-ts';
+import HomeView from '@/views/home/home.vue';
 
-export class Test {
-    public test() {
-        console.log('abc');
+@Component({
+    name: 'app',
+    components: {
+        'home-view': HomeView
     }
-}
+})
+export default class App extends Vue {
 
-new Test().test();
+}

@@ -4300,6 +4300,10 @@ ts-loader@^4.4.1:
     micromatch "^3.1.4"
     semver "^5.0.1"
 
+ts-vue-plugin@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ts-vue-plugin/-/ts-vue-plugin-0.2.0.tgz#01e2a8e93b31db3ca8933917d352b5b5d93f410b"
+
 tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"

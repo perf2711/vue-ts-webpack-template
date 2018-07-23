@@ -9,7 +9,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const resolve = (p) => path.resolve(__dirname, p);
 
 const config = {
-    entry: './src/app.ts',
+    entry: './src/index.ts',
     mode: 'development',
     devtool: 'inline-source-map',
     output: {
@@ -32,12 +32,14 @@ const config = {
     },
     module: {
         rules: [
-            { test: /\.tsx?$/, use: 'ts-loader' },
             { test: /\.vue$/, use: 'vue-loader' },
-            { test: /\.tsx?$/, enforce: 'pre', use: 'tslint-loader' },
+            { test: /^((?!vue).)*\.tsx?$/, enforce: 'pre', use: 'tslint-loader' },
+            { test: /\.tsx?$/, loader: 'ts-loader', options: {
+                appendTsSuffixTo: [/\.vue$/]
+            }},
             { test: /\.(c|sa|sc)ss/, use: [
                 devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-                'css-loader', 
+                'css-loader',
                 'sass-loader']},
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -62,7 +64,9 @@ const config = {
     },
     plugins: [
         new VueLoaderPlugin(),
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        }),
         new webpack.HotModuleReplacementPlugin()
     ]
 };
