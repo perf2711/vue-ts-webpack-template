@@ -1,0 +1,24 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "lib": [
+            "es2015",
+            "es2015.iterable",
+            "es2015.promise",
+            "dom"
+        ],
+        "removeComments": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@*": ["."]
+        },
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "sourceMap": true,
+        "experimentalDecorators": true        
+    },
+    "include": [
+        "./src/**/*.ts"
+    ]
+}
