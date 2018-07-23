@@ -9,5 +9,3 @@
 import AboutView from './about';
 export default AboutView;
 </script>
-
-

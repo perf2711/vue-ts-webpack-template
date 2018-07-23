@@ -1,6 +1,11 @@
 {
-  "name": "spotkaniex",
+  "name": "vue-ts-webpack-template",
   "version": "1.0.0",
+  "author": {
+    "name": "Sebastian Alex",
+    "email": "sebapotok@gmail.com",
+    "url": "https://github.com/perf2711"
+  },
   "main": "index.js",
   "license": "MIT",
   "scripts": {
